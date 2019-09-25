@@ -55,6 +55,7 @@ app.post("/message", function (req, res) {
    const msg = req.body.Body.toUpperCase()
    const succMsg = () => { res.send(`<Response><Message>Your Command "${msg}" was successfully interpreted </Message></Response>`)}
   if(counterMap.includes(msg)){
+     succMsg()
      let index = counterMap.indexOf(msg)
      counter[index]++
   }else{

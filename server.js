@@ -24,7 +24,6 @@ function intervalNode(params) {
     console.log("Count:" + timeCount)
     if (timeCount <= 0)
     {
-      clearInterval(intervalObj)
        active = false
        for (let i = 0; i < counter.length; i++) { //loop to find the most voted (largest int) int array
 
@@ -42,7 +41,6 @@ function intervalNode(params) {
       robot.keyTap(keyPressMap[highestIndex])
       active = true;
       timeCount = 5;
-      var intervalObj = setInterval(() => intervalNode() , 1000);
     }
   }
 }
